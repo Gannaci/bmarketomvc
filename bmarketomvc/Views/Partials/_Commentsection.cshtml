@@ -1,0 +1,56 @@
+﻿@model ContactFormViewModel
+<!-- commentsection börjar -->
+
+    <div class="commentsection">
+        <div class="container">
+            <div class="commentbody">
+                <form asp-action="Index" asp-controller="Contacts" method="post" class="commentform" novalidate>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <h2 class="title">Write Something</h2>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Name" class="form-lable">Name*</label>
+                            <input asp-for="Name" class="form-controll" onkeyup="validateText(event)" />
+                            <span asp-validation-for="Name"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email" class="form-lable">Email*</label>
+                            <input asp-for="Email" class="form-controll" onkeyup="validateEmail(event)" />
+                            <span asp-validation-for="Email"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="PhoneNumber" class="form-lable">PhoneNumber*</label>
+                            <input asp-for="PhoneNumber" class="form-controll" onkeyup="validateText(event)" />
+                            <span asp-validation-for="PhoneNumber"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Company" class="form-lable">Company (optinal)</label>
+                            <input asp-for="Company" class="form-controll" onkeyup="validateText(event) />
+                            <span asp-validation-for="Company"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Message" class="form-lable">Message*</label>
+                            <textarea asp-for="Message" class="form-controll" onkeyup="validateText(event)"></textarea>
+                            <span asp-validation-for="Message"></span>
+                        </div>
+                    </div>
+
+                    <div class="infobox">
+                        <label for="save-info">Save my name, email, and website in this browser for the next time I comment.</label>
+                        <input type="checkbox" id="save-info" name="save-info">
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- commentsection tar slut -->

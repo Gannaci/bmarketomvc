@@ -1,0 +1,19 @@
+.bottominfo {
+    height: 50px;
+    background-color: black;
+    margin-top: 0px;
+    .container {
+        margin-top: 0px;
+        p {
+            font-size: 16px;
+            font-weight: $font-weight-semibold;
+            font-family: $font-roboto;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            padding-top: 0.8em;
+            color: gray;
+        }
+    }
+}

@@ -1,0 +1,97 @@
+﻿@model RegisterViewModel
+<!-- registersection börjar -->
+
+    <div class="registersection">
+        <div class="container">
+            <div class="registerbody">
+                <form asp-action="Index" asp-controller="Register" method="post" class="registerform" novalidate>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <h2 class="title">Please Register Your new Account</h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="FirstName" class="form-lable">First Name*</label>
+                            <input asp-for="FirstName" class="form-control" onkeyup="validateText(event)"/>
+                            <span asp-validation-for="FirstName" ></span>
+                        </div>
+                        <div class="form-group">
+                        <label asp-for="LastName" class="form-lable">Last Name*</label>
+                        <input asp-for="LastName" class="form-control" onkeyup="validateText(event)" />
+                        <span asp-validation-for="LastName"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                        <label asp-for="StreetName" class="form-lable">Street Name*</label>
+                        <input asp-for="StreetName" class="form-control" onkeyup="validateText(event)" />
+                        <span asp-validation-for="StreetName"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                        <label asp-for="PostalCode" class="form-lable">Postal Code*</label>
+                        <input asp-for="PostalCode" class="form-control" onkeyup="validateText(event)" />
+                        <span asp-validation-for="PostalCode"></span>
+                        </div>
+                        <div class="form-group">
+                        <label asp-for="City" class="form-lable">City*</label>
+                        <input asp-for="City" class="form-control" onkeyup="validateText(event)" />
+                        <span asp-validation-for="City"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                        <label asp-for="PhoneNumber" class="form-lable">Phonenumber*</label>
+                        <input asp-for="PhoneNumber" class="form-control" onkeyup="validateText(event)" />
+                        <span asp-validation-for="PhoneNumber"></span>
+                        </div>
+                        <div class="form-group">
+                        <label asp-for="Company" class="form-lable">Company (optinal)</label>
+                        <input asp-for="Company" class="form-control" />
+                        <span asp-validation-for="Company"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                        <label asp-for="Email" class="form-lable">Email*</label>
+                        <input asp-for="Email" class="form-control" onkeyup="validateEmail(event)" />
+                        <span asp-validation-for="Email"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                        <label asp-for="Password" class="form-lable">Password*</label>
+                        <input asp-for="Password" class="form-control" onkeyup="validatePassword(event)" />
+                        <span asp-validation-for="Password"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                        <label asp-for="ConfirmPassword" class="form-lable">Confirm Password*</label>
+                        <input asp-for="ConfirmPassword" class="form-control" onkeyup="validatePassword(event)" />
+                        <span asp-validation-for="ConfirmPassword"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="picture" style="width: 1040px;">Upload Profile Image</label>
+                            <input type="text" id="picture" name="picture" required>
+                        </div>
+                    </div>
+                    <div class="infobox">
+                        <input type="checkbox" style="height: 10px;margin-left: 10px;" id="save-info" name="save-info">
+                        <label for="save-info">I have read and accepts the terms and agreements</label>
+
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- registersection tar slut -->

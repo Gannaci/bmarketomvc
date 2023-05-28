@@ -1,0 +1,162 @@
+.productinfo {
+    margin-top: 100px;
+
+    .container{
+        display: flex;
+
+        .images {
+            flex: 1;
+
+
+            .large {
+                height: 475px;
+               
+            }
+            .imagesmall {
+                display: flex;
+                margin-top: 10px;
+                gap: 7px;
+                max-width: 501px;
+                height: 113px;
+                
+
+
+                .small {
+                
+                }
+            }
+        }
+
+        .infomation {
+            flex: 1;
+            display: block;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            
+
+            .title {
+                font-size: 24px;
+                font-family: $font-poppins;
+                font-weight: $font-weight-medium;
+                color: $color-theme-blacksmooth;
+                margin-bottom: 30px;
+            }
+
+            p{
+                font-size: 16px;
+                font-family: $font-roboto;
+                color: #636363;
+                line-height: 0.5;
+                
+            }
+
+            .rating {
+                margin-top: 50px;
+
+                .fa-solid {
+                    color: $color-theme-yellow;
+                    font-size: 20px;
+                }
+
+                .reviews {
+                    font-size: 16px;
+                    font-family: $font-roboto;
+                    font-weight: normal;
+                    color: $color-theme-blacksmooth;
+                }
+
+            }
+
+            .price {
+                font-size: 24px;
+                font-family: $font-poppins;
+                font-weight: $font-weight-semibold;
+                color: $color-theme-blacksmooth;
+                margin-top: 30px;
+            }
+
+            .quantity {
+                margin-top: 20px;
+
+                .minus-btn {
+                    border: 0;
+                    width: 50px;
+                    color: black;
+                }
+
+                input {
+                    border: 0;
+                    width: 18px;
+                }
+
+                .plus-btn {
+                    border: 0;
+                    width: 50px;
+                    color: black;
+                }
+
+                .add-to-cart-btn {
+                    color: white;
+                    background-color: $color-theme-red;
+                    height: 45px;
+                    width: 200px;
+                    border: 0;
+                    margin-left: 50px;
+                }
+
+            }
+
+            .btn-colors {
+                margin-top: 20px;
+
+                .red {
+                    border: none;
+                    border-radius: 50%;
+                    width: 15px;
+                    height: 15px;
+                    background-color: $color-theme-red;
+                }
+
+                .yellow {
+                    border: none;
+                    border-radius: 50%;
+                    width: 15px;
+                    height: 15px;
+                    background-color: $color-theme-yellow;
+                }
+
+                .green {
+                    border: none;
+                    border-radius: 50%;
+                    width: 15px;
+                    height: 15px;
+                    background-color: $color-theme-green;
+                }
+
+                i {
+                    font-size: 16px;
+                    font-family: $font-roboto;
+                    margin-left: 50px;
+                    color: $color-theme-blacksmooth;
+                    font-weight: $font-weight-medium;
+                }
+            }
+
+            .addtowish {
+                margin-top: 20px;
+                border: none;
+                color: $color-theme-blacksmooth;
+                width: 194px;
+                height: 44px;
+                font-size: 16px;
+                font-family: $font-roboto;
+                font-weight: $font-weight-medium;
+            }
+
+            .category {
+                margin-top: 20px;
+            }
+        }
+    }
+}

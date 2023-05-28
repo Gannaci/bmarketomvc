@@ -1,0 +1,40 @@
+﻿ <!-- Best collection -->
+    <section class="best">
+        <div class="container">
+            <h1 class="title">Best Collection</h1>
+            <h3 class="clickabletext">
+                <a class="pointer" asp-controller="products" asp-action="index" >All</a>
+                <a asp-controller="products" asp-action="index"> / </a>
+                <a class="pointer" asp-controller="products" asp-action="index">Bags</a>
+                <a asp-controller="products" asp-action="index"> / </a>
+                <a class="pointer" asp-controller="products" asp-action="index">Dress</a>
+                <a asp-controller="products" asp-action="index"> / </a>
+                <a class="pointer" asp-controller="products" asp-action="index">Decoration</a>
+                <a asp-controller="products" asp-action="index"> / </a>
+                <a class="pointer" asp-controller="products" asp-action="index">Essentials</a>
+                <a asp-controller="products" asp-action="index"> / </a>
+                <a class="pointer" asp-controller="products" asp-action="index">Interior</a>
+                <a asp-controller="products" asp-action="index"> / </a>
+                <a class="pointer" asp-controller="products" asp-action="index">Laptop</a>
+                <a asp-controller="products" asp-action="index"> / </a>
+                <a class="pointer" asp-controller="products" asp-action="index">Mobile</a>
+                <a asp-controller="products" asp-action="index"> / </a>
+                <a class="pointer" asp-controller="products" asp-action="index">Beauty</a>
+            </h3>
+            <div class="grid">
+                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
+                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
+                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
+                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
+                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
+                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
+                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
+                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
+            
+            </div>
+            <div class="load-more">
+                <button class="btn-outline-white">Load More<i class="fa-solid fa-rotate-right"></i></button>
+            </div>
+        </div>
+    </section>
+<!-- Best collection tar slut -->

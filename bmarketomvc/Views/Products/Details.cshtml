@@ -1,0 +1,25 @@
+﻿@using bmarketomvc.Helpers.Repositories;
+@model int
+@inject ProductRepo productRepo
+
+@{
+    var product = await productRepo.GetAsync(x => x.Id == Model);
+}
+
+
+@if(product != null) {
+    <div>
+        <div>
+            <div>@product.Title</div>
+            <div>@product.Price</div>
+            <div><a asp-action="product" asp-route-id="@product.Id">@product.ImageUrl</a></div>
+            @foreach (var tag in product.Products)
+            {
+                <span>@tag.Tag.TagName</span>
+            }
+        </div>
+        <div>@product.Description</div>
+    </div>
+} else {
+    <div>Ingen produkt hittades inte</div>
+}

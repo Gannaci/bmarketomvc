@@ -1,0 +1,25 @@
+﻿<!-- Header -->
+<header>
+    <div class="container">
+        <img class="logomenu" src="/images/Logo.svg">
+
+        <div id="topmenu">
+            <nav class="topmenu-links">
+                <a class="menulink" asp-controller="home" asp-action="index">HOME</a>
+                <a class="menulink" asp-controller="products" asp-action="index">PRODUCTS</a>
+                <a class="menulink" asp-controller="Contacts" asp-action="index">CONTACT</a>
+            </nav>
+            <nav class="topmenu-icons">
+                <a class="menulinkicon" asp-controller="search" asp-action="index"><i class="fa-regular fa-search"></i></a>
+                <a class="menulinkicon" asp-controller="Login" asp-action="index">Login</a>
+                <a class="menulinkicon" asp-controller="shopping" asp-action="index"><i class="fa-solid fa-cart-shopping"></i></a>
+            </nav>
+        </div>
+
+        <div class="toggle">
+            <button class="btn-toggle btn-outline-white" data-option="toggle" data-target="#menu">
+                <i id="icon" class="fa-regular fa-bars"></i>
+            </button>
+    </div>
+</header>
+<!-- Header tar slut -->

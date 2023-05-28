@@ -1,0 +1,39 @@
+﻿@model LoginViewModel
+<!-- loginsection börjar -->
+
+    <div class="loginsection">
+        <div class="container">
+            <div class="loginbody">
+                <form asp-action="Index" asp-controller="Login" method="post" class="loginform" novalidate>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <h2 class="title">Please Login to Your Account</h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Email">Email adress <a asp-controller="register" asp-action="index"><i>Don't have an account yet?</i></a></label>
+                            <input asp-for="Email" class="form-controll" onkeyup="validateText(event)" />
+                            <span asp-validation-for="Email"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Password">Password <a asp-controller="register" asp-action="index"> <i>Forgot your password?</i></a></label>
+                            <input asp-for="Password" class="form-control" onkeyup="validatePassword(event)" />
+                            <span asp-validation-for="Password"></span>
+                        </div>
+
+                        <div class="infobox">
+                            <input type="checkbox" style="height: 16px;" id="save-info" name="save-info">
+                            <label for="save-info">Please keep me logged in</label>
+
+                        </div>
+                        
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- loginsection tar slut -->

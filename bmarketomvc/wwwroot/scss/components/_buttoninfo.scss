@@ -1,0 +1,65 @@
+.buttoninfo {
+    margin-top: 50px;
+    .container {
+        .btns {
+            display: flex;
+            gap: 20px;
+
+            .description-btn {
+                width: 291px;
+                height: 49px;
+                font-size: 16px;
+                font-family: $font-roboto;
+                color: black;
+                border-color: $color-theme-lightgray;
+
+                &:hover {
+                    background-color: $color-theme-red;
+                    color: white;
+                }
+            }
+
+            .info-btn {
+                width: 291px;
+                height: 49px;
+                font-size: 16px;
+                font-family: $font-roboto;
+                color: black;
+                border-color: $color-theme-lightgray;
+
+                &:hover {
+                    background-color: $color-theme-red;
+                    color: white;  
+                }
+            }
+
+            .reviews-btn {
+                width: 291px;
+                height: 49px;
+                font-size: 16px;
+                font-family: $font-roboto;
+                color: black;
+                border-color: $color-theme-lightgray;
+
+                &:hover {
+                    background-color: $color-theme-red;
+                    color: white;
+                }
+            }
+
+            .shipping-btn {
+                width: 291px;
+                height: 49px;
+                font-size: 16px;
+                font-family: $font-roboto;
+                color: black;
+                border-color: $color-theme-lightgray;
+
+                &:hover {
+                    background-color: $color-theme-red;
+                    color: white;
+                }
+            }
+        }
+    }
+}

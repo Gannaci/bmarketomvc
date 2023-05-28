@@ -1,0 +1,18 @@
+﻿@using bmarketomvc.Helpers.Repositories;
+@inject ProductRepo productRepo 
+
+<div>
+    @foreach(var product in await productRepo.GetAsync())
+    {
+        <div>
+            <div>@product.Title</div>
+            <div>@product.Price</div>
+            <div><a asp-action="product" asp-route-id="@product.Id"><img src="@product.ImageUrl" /></a></div>
+            @foreach(var tag in product.Products)
+            {
+                <span>@tag.Tag.TagName</span>
+            }
+        </div>
+
+    }
+</div>

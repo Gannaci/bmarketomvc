@@ -1,0 +1,18 @@
+﻿@inject ProductitemService productitemService;
+@{
+    var productItem = productitemService.GetProductitem();
+}
+
+<a class="items" asp-controller="product" asp-action="index">
+    <img src="@productItem.ImageUrl" alt="">
+    <div class="textbody">
+        <div class="infotext">@productItem.Title</div>
+        <div class="info">
+            <div class="price">@productItem.Price</div>
+            <i class="fa-regular fa-cart-plus"></i>
+        </div>
+        <div class="line">
+            <hr>
+        </div>
+    </div>
+</a>

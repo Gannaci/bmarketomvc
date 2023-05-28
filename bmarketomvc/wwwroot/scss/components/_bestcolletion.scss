@@ -1,0 +1,168 @@
+.best {
+    padding-top: 20px;
+    background-color: white;
+    .container {
+        
+        .title {
+            font-family: $font-poppins;
+            font-weight: $font-weight-semibold;
+            font-size: 25px;
+            color: $color-theme-blacksmooth;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+
+            @include lg {
+                font-size: 48px;
+                margin-bottom: 30px;
+            }
+        }
+        .clickabletext {
+            font-family: $font-roboto;
+            font-weight: $font-weight-regular;
+            font-size: 10px;
+            color: $color-theme-blackgray;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+
+            .pointer {
+                pointer-events: all;
+            }
+
+             a {
+                display: inline-block;
+                pointer-events: none;
+                margin-left: 10px;
+
+                &:hover {
+                    color: $color-theme-black;
+                    transition: all 0.3s;
+                }
+            }
+
+            @include lg {
+                font-size: 16px;
+                display: flex;
+            }
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 0.5fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 10px;
+
+            @include md {
+                    display: grid;
+                    grid-template-columns: repeat(2, 0.4fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    gap: 120px;
+            
+
+                @include lg {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    gap: 60px;
+
+                    @include xxl {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-template-rows: repeat(2, 1fr);
+                        gap: 70px;
+                    }
+                }
+            }
+            .items {
+                justify-content: center;
+                text-decoration: none;
+                display: grid;
+
+                img {
+                    width: 170px;
+                    height: 195px;
+
+                    @include md {
+                        width: 270px;
+                        height: 295px;
+                    }
+                }
+                
+                .textbody {
+
+                    .infotext {
+                        font-family: $font-poppins;
+                        font-weight: $font-weight-medium;
+                        font-size: 12px;
+                        margin-top: 10px;
+                        color : black;
+
+                        @include md {
+                            font-size: 18px;
+                        }
+                    }
+    
+                    .info {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        color: black;
+                        
+                        
+                        @include md {
+                            display: flex;
+                            margin-right: 0;
+                        }
+                        
+    
+                        .price {
+                            font-family: $font-poppins;
+                            font-weight: $font-weight-regular;
+                            font-size: 10px;
+                            margin-top: 5px;
+                            color: #636363;
+
+                            @include md {
+                                font-size: 16px;
+                            }
+                        }
+
+                        i {
+                            font-size: 13px;
+
+                            @include md {
+                                font-size: 16px;
+                            }
+                        }
+                    } 
+                } 
+            }
+        }
+        
+        .load-more {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            
+
+
+            button {
+                width: 300px;
+                height: 50px;
+                font-size: 16px;
+                font-family: $font-poppins;
+                font-weight: $font-weight-regular;
+                color: black;
+                
+            }
+
+            i {
+                margin-left: 5px;
+            }
+        }
+    }
+}

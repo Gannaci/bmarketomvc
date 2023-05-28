@@ -1,0 +1,187 @@
+.discount {
+    padding-top: 60px;
+    background-color: #FAEFEF;
+    height: 590px;
+    margin-top: 50px;
+
+    .container {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        @include lg {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left; 
+        }
+
+        .items {
+            text-decoration: none;
+            img {
+                height: 250px;
+                width: 300px;
+
+                @include xl {
+                    height: 310px;
+                    width: 369px;
+                }
+            }
+
+            .textbody {
+                font-size: 10px;
+                color: #636363;
+                background-color: white;
+                height: 120px;
+                width: 370px;
+                
+
+                @include xl {
+                    font-size: 16px;
+                }
+                
+                .infotext {
+                    font-family: $font-poppins;
+                    font-weight: $font-weight-medium;
+                    color: $color-theme-black;
+                    font-size: 12px;
+                    padding-top: 30px;
+                    background-color: white;
+                    margin-left: 20px;
+                    
+
+                    @include xl {
+                        font-size: 18px;
+                    }
+                }
+
+                .info {
+                    
+
+                    @include xl {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .price {
+                    font-size: 10px;
+                    font-family: $font-poppins;
+                    font-weight: $font-weight-regular;
+                    color: #636363;
+                    margin-top: 10px;
+                    margin-left: 20px;
+                    padding-top: 20px;
+                    
+                    
+
+                        @include xl {
+                            font-size: 16px;
+                            
+                        }
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+
+                    .fa-regular {
+                        margin-top: 10px;
+                        padding-top: 30px;
+                        margin-right: 20px;
+                        
+                        
+
+                        @include xl {
+                            margin-top: 0px;
+                            display: flex;
+                            justify-content: flex-end;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sell {
+            display: block;
+            text-align: center;
+            background-color: white;
+            width: 370px;
+            height: 430px;
+            padding-top: 50px;
+            
+            .title {
+                font-weight: $font-weight-bold;
+                font-size: 12px;
+                font-family: $font-poppins;
+                color: $color-theme-red;
+
+                @include xl {
+                    font-size: 18px;
+                }
+            }
+
+            h1 {
+                font-size: 24px;
+                font-weight: $font-weight-bold;
+                color: $color-theme-black;
+                margin-top: 10px;
+                padding-top: 20px;
+
+                @include xl {
+                    font-size: 48px;
+                    margin-top: 20px;
+                }
+            }
+
+            h2 {
+                font-weight: $font-weight-bold;
+                font-size: 16px;
+                font-family: $font-poppins;
+                color: $color-theme-black;
+                margin-top: 10px;
+                padding-top: 10px;
+
+                @include xl {
+                    font-size: 24px;
+                    margin-top: 20px;
+                }
+            }
+
+            i {
+                font-size: 12px;
+                display: block;
+                font-family: $font-roboto;
+                font-weight: $font-weight-regular;
+                color: $color-theme-black;
+                margin-top: 2px;
+
+                
+                    
+                    
+
+                @include xl {
+                    font-size: 16px;
+                    
+                    
+                }
+            }
+
+            .discover {
+                    margin-bottom: 50px;;
+                .more {
+                    font-weight: $font-weight-regular;
+                    font-size: 12px;
+                    font-family: $font-poppins;
+                    display: block;
+                    margin-top: 50px;
+                    
+
+                    @include xl {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

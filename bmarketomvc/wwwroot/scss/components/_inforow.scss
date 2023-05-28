@@ -1,0 +1,85 @@
+.inforow {
+    padding-top: 60px;
+    background-color: white;
+
+    .container {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        @include lg {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left; 
+        }
+
+        .items {
+            text-decoration: none;
+
+            img {
+                height: 250px;
+                width: 300px;
+
+                @include xl {
+                    height: 295px;
+                    width: 370px;
+                }
+            }
+
+            .textbody {
+                font-size: 10px;
+                color: #636363;
+
+                @include xl {
+                    font-size: 16px;
+                }
+
+                .infotext {
+                    font-family: $font-poppins;
+                    font-weight: $font-weight-medium;
+                    color: $color-theme-black;
+                    font-size: 12px;
+                    margin-top: 10px;
+
+                    @include xl {
+                        font-size: 18px;
+                    }
+                }
+
+                .info {
+                    
+                    
+
+                    .description {
+                        font-size: 10px;
+                        font-family: $font-poppins;
+                        font-weight: $font-weight-regular;
+                        color: #636363;
+                        margin-top: 10px;
+            
+                        @include xl {
+                            font-size: 16px;
+                            
+                        }
+
+                        p {
+                            font-family: $font-roboto;
+                            font-weight: $font-weight-regular;
+                            margin-bottom: 0px;
+                            color: #636363;
+                        }
+                    }
+                }
+
+                .posted {
+                    font-size: 12px;
+                    font-weight: $font-weight-regular;
+                    font-family: $font-poppins;
+                    color: #B0B0B0;
+                }
+            }
+        }
+    }
+}
