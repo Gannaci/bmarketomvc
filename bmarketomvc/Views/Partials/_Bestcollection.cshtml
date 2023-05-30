@@ -1,4 +1,11 @@
 ﻿ <!-- Best collection -->
+ @inject ProductRepo productRepo;
+ @inject ProductEntity _productEntity;
+@{
+    var products = await productRepo.GetAsync();
+    var _bestCollection = products.Where(x => x.Products.Any(x => x.TagId == 1));
+}
+
     <section class="best">
         <div class="container">
             <h1 class="title">Best Collection</h1>
@@ -22,15 +29,12 @@
                 <a class="pointer" asp-controller="products" asp-action="index">Beauty</a>
             </h3>
             <div class="grid">
-                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
-                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
-                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
-                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
-                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
-                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
-                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
-                <partial name="/Views/Partials/_Productitem.cshtml"></partial>
-            
+                @foreach (var product in _bestCollection)
+            {
+                <div>
+                    <partial name="/Views/Partials/_Productitem.cshtml" model="product">
+                </div>
+            }           
             </div>
             <div class="load-more">
                 <button class="btn-outline-white">Load More<i class="fa-solid fa-rotate-right"></i></button>

@@ -7,78 +7,101 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        
+
         @include lg {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            text-align: left; 
+            text-align: left;
         }
 
-        .items {
-            text-decoration: none;
+        .content {
 
-            img {
-                height: 250px;
-                width: 300px;
+            .items {
+                justify-content: center;
+                text-decoration: none;
+                display: grid;
 
-                @include xl {
-                    height: 295px;
-                    width: 370px;
+                img {
+                    width: 369px;
+                    height: 290px;
+                }
+
+                .textbody {
+
+                    .infotext {
+                        font-family: $font-poppins;
+                        font-weight: $font-weight-medium;
+                        font-size: 12px;
+                        margin-top: 10px;
+                        color: black;
+
+                        @include md {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .info {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        color: black;
+
+
+                        @include md {
+                            display: flex;
+                            margin-right: 0;
+                        }
+
+
+                        .price {
+                            font-family: $font-poppins;
+                            font-weight: $font-weight-regular;
+                            font-size: 10px;
+                            margin-top: 5px;
+                            color: #636363;
+                            display: none;
+
+                            @include md {
+                                font-size: 16px;
+                            }
+                        }
+
+                        i {
+                            font-size: 13px;
+                            display: none;
+
+                            @include md {
+                                font-size: 16px;
+                            }
+                        }
+                    }
                 }
             }
-
-            .textbody {
+            .description {
                 font-size: 10px;
+                font-family: $font-poppins;
+                font-weight: $font-weight-regular;
                 color: #636363;
+                margin-top: 10px;
 
                 @include xl {
                     font-size: 16px;
                 }
 
-                .infotext {
-                    font-family: $font-poppins;
-                    font-weight: $font-weight-medium;
-                    color: $color-theme-black;
-                    font-size: 12px;
-                    margin-top: 10px;
-
-                    @include xl {
-                        font-size: 18px;
-                    }
-                }
-
-                .info {
-                    
-                    
-
-                    .description {
-                        font-size: 10px;
-                        font-family: $font-poppins;
-                        font-weight: $font-weight-regular;
-                        color: #636363;
-                        margin-top: 10px;
-            
-                        @include xl {
-                            font-size: 16px;
-                            
-                        }
-
-                        p {
-                            font-family: $font-roboto;
-                            font-weight: $font-weight-regular;
-                            margin-bottom: 0px;
-                            color: #636363;
-                        }
-                    }
-                }
-
-                .posted {
-                    font-size: 12px;
+                p {
+                    font-family: $font-roboto;
                     font-weight: $font-weight-regular;
-                    font-family: $font-poppins;
-                    color: #B0B0B0;
+                    margin-bottom: 0px;
+                    color: #636363;
                 }
+            }
+
+            .posted {
+                font-size: 12px;
+                font-weight: $font-weight-regular;
+                font-family: $font-poppins;
+                color: #B0B0B0;
             }
         }
     }

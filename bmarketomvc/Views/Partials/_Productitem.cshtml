@@ -1,14 +1,13 @@
-﻿@inject ProductitemService productitemService;
-@{
-    var productItem = productitemService.GetProductitem();
-}
+﻿@model ProductEntity;
 
-<a class="items" asp-controller="product" asp-action="index">
-    <img src="@productItem.ImageUrl" alt="">
+
+<a asp-controller="products" asp-action="details" asp-route-productId="@Model.Id" class="items">
+    <img src="@Model.ImageUrl" alt="">
     <div class="textbody">
-        <div class="infotext">@productItem.Title</div>
+        <div class="infotext">@Model.Title</div>
         <div class="info">
-            <div class="price">@productItem.Price</div>
+            <div class="price">@Model.Price</div>
+            <div class="description">@Model.Description</div>
             <i class="fa-regular fa-cart-plus"></i>
         </div>
         <div class="line">

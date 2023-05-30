@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using bmarketomvc.Contexts;
 
@@ -11,9 +12,11 @@ using bmarketomvc.Contexts;
 namespace bmarketomvc.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230529130120_fixed products images")]
+    partial class fixedproductsimages
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,14 +55,14 @@ namespace bmarketomvc.Migrations
                         new
                         {
                             Id = "ea3bc81b-067d-4116-beab-193c8e836009",
-                            ConcurrencyStamp = "912e2d8c-26ad-4321-b71a-74c4e7049424",
+                            ConcurrencyStamp = "ee8dd81f-d7e1-49ab-a2a6-25d933529bfb",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "0c853e18-0400-40cb-a4e3-ad8ccce39f1f",
-                            ConcurrencyStamp = "1ac28502-f82b-4e21-9fad-6fa88a9ed626",
+                            ConcurrencyStamp = "28b7791a-b080-45da-b813-4db13cd6e16e",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -257,8 +260,8 @@ namespace bmarketomvc.Migrations
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("money");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -273,133 +276,133 @@ namespace bmarketomvc.Migrations
                         {
                             Id = 1,
                             ImageUrl = "/images/applewatch-270-295.jpg",
-                            Price = "$30",
+                            Price = 30m,
                             Title = "Apple watch series"
                         },
                         new
                         {
                             Id = 2,
                             ImageUrl = "/images/lamp-270-295.jpg",
-                            Price = "$30",
+                            Price = 30m,
                             Title = "Table Lamp"
                         },
                         new
                         {
                             Id = 3,
                             ImageUrl = "/images/laptop-270-295.jpg",
-                            Price = "$30",
+                            Price = 30m,
                             Title = "Laptop"
                         },
                         new
                         {
                             Id = 4,
                             ImageUrl = "/images/mirror-270-295.jpg",
-                            Price = "$30",
+                            Price = 30m,
                             Title = "Mirror"
                         },
                         new
                         {
                             Id = 5,
                             ImageUrl = "/images/rice-270-295.jpg",
-                            Price = "$30",
+                            Price = 30m,
                             Title = "Rice cooker"
                         },
                         new
                         {
                             Id = 6,
                             ImageUrl = "/images/pizza-270-295.jpg",
-                            Price = "$30",
+                            Price = 30m,
                             Title = "Pizza slice"
                         },
                         new
                         {
                             Id = 7,
                             ImageUrl = "/images/sunglasses-270-295.jpg",
-                            Price = "$30",
+                            Price = 30m,
                             Title = "Sunglasses"
                         },
                         new
                         {
                             Id = 8,
                             ImageUrl = "/images/watterbottle-270-295.jpg",
-                            Price = "$30",
+                            Price = 30m,
                             Title = "Watter bottle"
                         },
                         new
                         {
                             Id = 9,
                             ImageUrl = "/images/lamp-369-310.jpg",
-                            Price = "$30",
+                            Price = 30m,
                             Title = "Lamp"
                         },
                         new
                         {
                             Id = 10,
                             ImageUrl = "/images/lamp-1-369-310.jpg",
-                            Price = "$30",
+                            Price = 30m,
                             Title = "Lamp"
                         },
                         new
                         {
                             Id = 11,
                             ImageUrl = "/images/fotball-270-295.jpg",
-                            Price = "$100",
+                            Price = 100m,
                             Title = "Fotball"
                         },
                         new
                         {
                             Id = 12,
                             ImageUrl = "/images/coffe-270-295.jpg",
-                            Price = "$100",
+                            Price = 30m,
                             Title = "Coffe"
                         },
                         new
                         {
                             Id = 13,
                             ImageUrl = "/images/dress-270-295.jpg",
-                            Price = "$120",
+                            Price = 120m,
                             Title = "Dress"
                         },
                         new
                         {
                             Id = 14,
                             ImageUrl = "/images/dress-2-270-295.jpg",
-                            Price = "$120",
+                            Price = 120m,
                             Title = "Dress"
                         },
                         new
                         {
                             Id = 15,
                             ImageUrl = "/images/iphone-270-295.jpg",
-                            Price = "$500",
+                            Price = 500m,
                             Title = "Iphone"
                         },
                         new
                         {
                             Id = 16,
                             ImageUrl = "/images/shoes-270-295.jpg",
-                            Price = "$200",
+                            Price = 200m,
                             Title = "Shoes"
                         },
                         new
                         {
                             Id = 17,
                             ImageUrl = "/images/lamp-369-295.jpg",
-                            Price = "$700",
+                            Price = 30m,
                             Title = "Lamp"
                         },
                         new
                         {
                             Id = 18,
                             ImageUrl = "/images/lamp-1-369-295.jpg",
-                            Price = "$700",
+                            Price = 30m,
                             Title = "Lamp"
                         },
                         new
                         {
                             Id = 19,
                             ImageUrl = "/images/lamp-2-369-295.jpg",
-                            Price = "$700",
+                            Price = 30m,
                             Title = "Lamp"
                         });
                 });
@@ -427,162 +430,92 @@ namespace bmarketomvc.Migrations
                         new
                         {
                             ProductId = 2,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 3,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 4,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 5,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 6,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 7,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 8,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 9,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 10,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 11,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 12,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 13,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 14,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 15,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 16,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 17,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 18,
-                            TagId = 2
+                            TagId = 1
                         },
                         new
                         {
                             ProductId = 19,
-                            TagId = 2
-                        },
-                        new
-                        {
-                            ProductId = 1,
                             TagId = 1
-                        },
-                        new
-                        {
-                            ProductId = 2,
-                            TagId = 1
-                        },
-                        new
-                        {
-                            ProductId = 3,
-                            TagId = 1
-                        },
-                        new
-                        {
-                            ProductId = 4,
-                            TagId = 1
-                        },
-                        new
-                        {
-                            ProductId = 5,
-                            TagId = 1
-                        },
-                        new
-                        {
-                            ProductId = 6,
-                            TagId = 1
-                        },
-                        new
-                        {
-                            ProductId = 7,
-                            TagId = 1
-                        },
-                        new
-                        {
-                            ProductId = 8,
-                            TagId = 1
-                        },
-                        new
-                        {
-                            ProductId = 11,
-                            TagId = 3
-                        },
-                        new
-                        {
-                            ProductId = 12,
-                            TagId = 3
-                        },
-                        new
-                        {
-                            ProductId = 13,
-                            TagId = 3
-                        },
-                        new
-                        {
-                            ProductId = 14,
-                            TagId = 3
-                        },
-                        new
-                        {
-                            ProductId = 15,
-                            TagId = 3
-                        },
-                        new
-                        {
-                            ProductId = 16,
-                            TagId = 3
                         });
                 });
 
@@ -715,15 +648,15 @@ namespace bmarketomvc.Migrations
                         {
                             Id = "48dd5706-f505-4a50-a123-dfb2cdf88171",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "4e427ce1-935d-46e8-9ea4-86f1470ea6bd",
+                            ConcurrencyStamp = "04836271-962d-4f49-baed-58b83c8a9c6a",
                             Email = "admin@bmarketo.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@BMARKETO.COM",
                             NormalizedUserName = "ADMIN@BMARKETO.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEIE4pG3Rr3t0W5Ob45uz4qrwAYNCGn6l3aMEE/a3zQ9RaO/+7VN1emkFADO/ZNk3Hg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAED9UN4G3tnzTVKrd0Xo8fUbjAl21IlepEPiUIUnB97K3ibT6BH2JlcbchPdYw93RaQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "70f13f09-798d-4883-9d4c-aa52a789d518",
+                            SecurityStamp = "b19e0c42-0990-4e51-93cf-7632c0c13e03",
                             TwoFactorEnabled = false,
                             UserName = "admin@bmarketo.com"
                         });

@@ -1,23 +1,19 @@
-﻿@inject ProductitemService productitemService;
-@{
-    var productItem = productitemService.GetProductitem();
-}
-
-<!-- Productinfo börjar -->
+﻿<!-- Productinfo börjar -->
+@model ProductEntity;
 
     <section class="productinfo">
         <div class="container">
             <div class="images">
-                <img class="large" src="@productItem.ImageUrl">
+                <img class="large" src="@Model.ImageUrl">
                 <div class="imagesmall">
-                    <img class="small" src="@productItem.ImageUrl">
-                    <img class="small" src="@productItem.ImageUrl">
-                    <img class="small" src="@productItem.ImageUrl">
-                    <img class="small" src="@productItem.ImageUrl">
+                    <img class="small" src="/images/120x113.svg">
+                    <img class="small" src="/images/120x113.svg">
+                    <img class="small" src="/images/120x113.svg">
+                    <img class="small" src="/images/120x113.svg">
                 </div>
             </div>
             <div class="infomation">
-                <p class="title">@productItem.Title</p>
+                <p class="title">@Model.Title</p>
                 <p>Lirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</p>
                 <p>voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita</p>
                 <p>kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
@@ -29,7 +25,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="reviews">16 Reviews</i>
                 </div>
-                <h1 class="price">@productItem.Price</h1>
+                <h1 class="price">@Model.Price</h1>
                 <div class="quantity">
                     <button class="minus-btn" type="button">-</button>
                     <input type="text" value="0">
@@ -43,7 +39,7 @@
                     <i>SKU: N/A</i>
                 </div>
                 <button class="addtowish">Add to wishlist</button>
-                <div class="category">Category: Table lamp, Light</div>
+                <div class="category">Category: @foreach(var x in Model.Products) {<span>@x.Tag.TagName </span>} </div>
             </div>
         </div>
     </section>

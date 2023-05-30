@@ -1,17 +1,20 @@
 ﻿<!-- Discount collection startar -->
+@inject ProductRepo productRepo;
+@inject ProductEntity _productEntity;
+
+@{
+    var products = await productRepo.GetAsync();
+    var temp = products.Where(x => x.Products.Any(x => x.TagId == 2)).Take(10);
+    var _discountProducts = temp.TakeLast(2);
+    var _firstProduct = _discountProducts.First();
+    var _secondProduct = _discountProducts.Last();
+}
+
 <div class="discount">
     <div class="container">
-        <a class="items" asp-controller="product" asp-action="index">
-            <img src="images/369x310.svg">
-            <div class="textbody">
-                <div class="infotext">Table lamp</div>
-                <div class="info">
-                    <div class="price">30.00$</div>
-                    <i class="fa-regular fa-cart-plus"></i>
-                </div>
-            </div>
-        </a>
-
+        <div class="picture-1">
+            <partial name="/Views/Partials/_Productitem.cshtml" model="_firstProduct" />
+        </div>
         <div class="sell">
             <div class="title">Up To Sell</div>
             <h1>50% Off</h1>
@@ -21,17 +24,9 @@
                 <a class="more" asp-controller="products" asp-action="index">Discover More</a>
             </div>
         </div>
-
-        <a class="items" asp-controller="product" asp-action="index">
-            <img src="images/369x310.svg">
-            <div class="textbody">
-                <div class="infotext">Table lamp</div>
-                <div class="info">
-                    <div class="price">30.00$</div>
-                    <i class="fa-regular fa-cart-plus"></i>
-                </div>
-            </div>
-        </a>
+        <div class="picture-2">
+            <partial name="/Views/Partials/_Productitem.cshtml" model="_secondProduct" />
+        </div>
     </div>
 </div>
 <!-- Discount collection tar slut -->

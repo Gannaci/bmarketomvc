@@ -1,58 +1,33 @@
 ﻿<!-- Inforow börjar -->
+@inject ProductRepo productRepo;
+@inject ProductEntity _productEntity;
+
+@{
+    var products = await productRepo.GetAsync();
+    var _infoProducts = products.Where(x => x.Products.Any(x => x.TagId == 2));
+    var _productList = _infoProducts.OrderBy(x => x.Price);
+    var _allInfoProducts = _productList.TakeLast(3);
+}
 
     <div class="inforow">
         <div class="container">
-        <a class="items" asp-controller="product" asp-action="index">
-                <img src="images/370x295.svg">
-                <div class="textbody">
-                    <div class="infotext">Table lamp 1562 LTG modal</div>
-                    <div class="info">
-                        <div class="description">
-                            <p>Best dress for everyone ed totam velit risus viverra</p>
-                            <p>nobis donec recusandae perspiciatis incididuno</p>
-                        </div>
-                        <div class="posted">Posted by admin comments 13</div>
-                        <div class="line">
-                            <hr>
-                        </div>
+        @foreach (var product in _allInfoProducts)
+            {
+                <div class="content">
+                    <partial name="/Views/Partials/_Productitem.cshtml" model="product" />
+                    <div class="description">
+                        <p>Best dress for everyone ed totam velit risus viverra</p>
+                        <p>nobis donec recusandae perspiciatis incididuno</p>
+                    </div>
+                    <div class="posted">Posted by admin comments 13</div>
+                    <div class="line">
+                        <hr>
                     </div>
                 </div>
-            </a>
-        
-            <a class="items" asp-controller="product" asp-action="index">
-                <img src="images/370x295.svg">
-                <div class="textbody">
-                    <div class="infotext">Table lamp 1562 LTG modal</div>
-                    <div class="info">
-                        <div class="description">
-                            <p>Best dress for everyone ed totam velit risus viverra</p>
-                            <p>nobis donec recusandae perspiciatis incididuno</p>
-                        </div>
-                        <div class="posted">Posted by admin comments 13</div>
-                        <div class="line">
-                            <hr>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a class="items" asp-controller="product" asp-action="index">
-                <img src="images/370x295.svg">
-                <div class="textbody">
-                    <div class="infotext">Table lamp 1562 LTG modal</div>
-                    <div class="info">
-                        <div class="description">
-                            <p>Best dress for everyone ed totam velit risus viverra</p>
-                            <p>nobis donec recusandae perspiciatis incididuno</p>
-                        </div>
-                        <div class="posted">Posted by admin comments 13</div>
-                        <div class="line">
-                            <hr>
-                        </div>
-                    </div>
-                </div>
-            </a>
+            }
         </div>
-    </div>
+      </div>
+
+   
 
 <!-- Inforow tar slut -->

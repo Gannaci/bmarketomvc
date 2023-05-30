@@ -1,12 +1,19 @@
 ﻿ <!-- Topseller startar -->
+ @inject ProductEntity _productEntity;
+ @inject ProductRepo productRepo;
+ @{
+    var products = await productRepo.GetAsync();
+    var _topSeller = products.Where(x => x.Products.Any(x => x.TagId == 3));
+ }
+
     <div class="topseller">
         <div class="title">Top selling products in this week</div>
         <div class="container">
-            <partial name="/Views/Partials/_Productitem.cshtml"></partial>
-            <partial name="/Views/Partials/_Productitem.cshtml"></partial>
-            <partial name="/Views/Partials/_Productitem.cshtml"></partial>
-            <partial name="/Views/Partials/_Productitem.cshtml"></partial>
-            <partial name="/Views/Partials/_Productitem.cshtml"></partial>
+            @foreach(var product in _topSeller)
+            {
+                <partial name="/Views/Partials/_Productitem.cshtml" model="product"/>
+            }
+           
         </div>
         <div class="load-more">
             <button class="btn-outline-white me-1"><i class="fa-solid fa-chevron-left"></i></button>

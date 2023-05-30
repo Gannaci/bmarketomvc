@@ -9,9 +9,9 @@ namespace bmarketomvc.Controllers
             return View();
         }
 
-        public IActionResult Details(int id) 
+        public IActionResult Details(int productId)
         {
-            return View(id);
+            return View(productId);
         }
     }
 }

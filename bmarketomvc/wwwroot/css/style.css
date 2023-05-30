@@ -654,41 +654,62 @@ header .btn-toggle {
     text-align: left;
   }
 }
-.inforow .container .items {
+.inforow .container .content .items {
+  justify-content: center;
   text-decoration: none;
+  display: grid;
 }
-.inforow .container .items img {
-  height: 250px;
-  width: 300px;
+.inforow .container .content .items img {
+  width: 369px;
+  height: 290px;
 }
-@media (min-width: 1200px) {
-  .inforow .container .items img {
-    height: 295px;
-    width: 370px;
-  }
-}
-.inforow .container .items .textbody {
-  font-size: 10px;
-  color: #636363;
-}
-@media (min-width: 1200px) {
-  .inforow .container .items .textbody {
-    font-size: 16px;
-  }
-}
-.inforow .container .items .textbody .infotext {
+.inforow .container .content .items .textbody .infotext {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  color: #000000;
   font-size: 12px;
   margin-top: 10px;
+  color: black;
 }
-@media (min-width: 1200px) {
-  .inforow .container .items .textbody .infotext {
+@media (min-width: 768px) {
+  .inforow .container .content .items .textbody .infotext {
     font-size: 18px;
   }
 }
-.inforow .container .items .textbody .info .description {
+.inforow .container .content .items .textbody .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+@media (min-width: 768px) {
+  .inforow .container .content .items .textbody .info {
+    display: flex;
+    margin-right: 0;
+  }
+}
+.inforow .container .content .items .textbody .info .price {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  margin-top: 5px;
+  color: #636363;
+  display: none;
+}
+@media (min-width: 768px) {
+  .inforow .container .content .items .textbody .info .price {
+    font-size: 16px;
+  }
+}
+.inforow .container .content .items .textbody .info i {
+  font-size: 13px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .inforow .container .content .items .textbody .info i {
+    font-size: 16px;
+  }
+}
+.inforow .container .content .description {
   font-size: 10px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -696,17 +717,17 @@ header .btn-toggle {
   margin-top: 10px;
 }
 @media (min-width: 1200px) {
-  .inforow .container .items .textbody .info .description {
+  .inforow .container .content .description {
     font-size: 16px;
   }
 }
-.inforow .container .items .textbody .info .description p {
+.inforow .container .content .description p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   margin-bottom: 0px;
   color: #636363;
 }
-.inforow .container .items .textbody .posted {
+.inforow .container .content .posted {
   font-size: 12px;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
@@ -802,6 +823,7 @@ header .btn-toggle {
 }
 .productinfo .container .images .large {
   height: 475px;
+  width: 501px;
 }
 .productinfo .container .images .imagesmall {
   display: flex;
@@ -1333,4 +1355,65 @@ header .btn-toggle {
 }
 .loginsection .container .loginbody .loginform button[type=submit]:hover {
   background-color: rgb(233, 96, 96);
+}
+
+.container .product-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3fr);
+  grid-template-rows: auto;
+  gap: 40px;
+}
+.container .product-grid .items {
+  justify-content: center;
+  text-decoration: none;
+  display: grid;
+}
+.container .product-grid .items img {
+  width: 270px;
+  height: 295px;
+}
+.container .product-grid .items .textbody .infotext {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  margin-top: 10px;
+  color: black;
+}
+@media (min-width: 768px) {
+  .container .product-grid .items .textbody .infotext {
+    font-size: 18px;
+  }
+}
+.container .product-grid .items .textbody .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+@media (min-width: 768px) {
+  .container .product-grid .items .textbody .info {
+    display: flex;
+    margin-right: 0;
+  }
+}
+.container .product-grid .items .textbody .info .price {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  margin-top: 5px;
+  color: #636363;
+}
+@media (min-width: 768px) {
+  .container .product-grid .items .textbody .info .price {
+    font-size: 16px;
+  }
+}
+.container .product-grid .items .textbody .info i {
+  font-size: 13px;
+}
+@media (min-width: 768px) {
+  .container .product-grid .items .textbody .info i {
+    font-size: 16px;
+  }
 }

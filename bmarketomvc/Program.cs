@@ -38,7 +38,8 @@ builder.Services.AddScoped<UserAddressRepo>();
 builder.Services.AddScoped<AuthenticationService>();
 builder.Services.AddScoped<AddressService>();
 builder.Services.AddScoped<UserAdminService>();
-builder.Services.AddScoped<ProductitemService>();
+
+builder.Services.AddTransient<ProductEntity>();
 
 
 var app = builder.Build();

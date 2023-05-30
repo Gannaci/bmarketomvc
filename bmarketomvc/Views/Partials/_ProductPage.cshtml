@@ -1,10 +1,10 @@
 ﻿@using bmarketomvc.Helpers.Repositories;
-@inject ProductRepo productRepo 
+@inject ProductRepo productRepo
 
 @{
     var products = await productRepo.GetAsync();
 }
-
+    
 <div class="container">
     <div style="height: 80px"></div>
     <h1>ALL PRODUCTS</h1>
