@@ -4,6 +4,9 @@
 @{
     var products = await productRepo.GetAsync();
 }
+@{
+    ViewData["Title"] = "All products";
+}
 
 <div class="container">
     <div style="height: 80px"></div>

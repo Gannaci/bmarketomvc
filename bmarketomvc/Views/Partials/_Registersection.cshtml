@@ -13,67 +13,59 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label asp-for="FirstName" class="form-lable">First Name*</label>
-                            <input asp-for="FirstName" class="form-control" onkeyup="validateText(event)"/>
-                            <span asp-validation-for="FirstName" ></span>
+                            <label asp-for="FirstName">First Name* <span asp-validation-for="FirstName"></span></label>
+                            <input asp-for="FirstName" onkeyup="validateText(event)"/>  
                         </div>
                         <div class="form-group">
-                        <label asp-for="LastName" class="form-lable">Last Name*</label>
-                        <input asp-for="LastName" class="form-control" onkeyup="validateText(event)" />
-                        <span asp-validation-for="LastName"></span>
+                        <label asp-for="LastName">Last Name* <span asp-validation-for="LastName"></span></label>
+                        <input asp-for="LastName"  onkeyup="validateText(event)" />
+
+                        </div>
+                    </div>
+                    <div class="form-one-row">
+                        <div class="form-group">
+                        <label asp-for="StreetName">Street Name* <span asp-validation-for="StreetName"></span></label>
+                        <input asp-for="StreetName" onkeyup="validateText(event)" />
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                        <label asp-for="StreetName" class="form-lable">Street Name*</label>
-                        <input asp-for="StreetName" class="form-control" onkeyup="validateText(event)" />
-                        <span asp-validation-for="StreetName"></span>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                        <label asp-for="PostalCode" class="form-lable">Postal Code*</label>
-                        <input asp-for="PostalCode" class="form-control" onkeyup="validateText(event)" />
-                        <span asp-validation-for="PostalCode"></span>
+                        <label asp-for="PostalCode">Postal Code* <span asp-validation-for="PostalCode"></span> </label>
+                        <input asp-for="PostalCode" onkeyup="validateText(event)" />
                         </div>
                         <div class="form-group">
-                        <label asp-for="City" class="form-lable">City*</label>
-                        <input asp-for="City" class="form-control" onkeyup="validateText(event)" />
-                        <span asp-validation-for="City"></span>
+                        <label asp-for="City">City* <span asp-validation-for="City"></span></label>
+                        <input asp-for="City" onkeyup="validateText(event)" />
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                        <label asp-for="PhoneNumber" class="form-lable">Phonenumber*</label>
-                        <input asp-for="PhoneNumber" class="form-control" onkeyup="validateText(event)" />
-                        <span asp-validation-for="PhoneNumber"></span>
+                        <label asp-for="PhoneNumber">Phonenumber*  <span asp-validation-for="PhoneNumber"></span> </label>
+                        <input asp-for="PhoneNumber" onkeyup="validateText(event)"  />
                         </div>
                         <div class="form-group">
-                        <label asp-for="Company" class="form-lable">Company (optinal)</label>
-                        <input asp-for="Company" class="form-control" />
-                        <span asp-validation-for="Company"></span>
+                        <label asp-for="Company">Company (optinal)</label>
+                        <input asp-for="Company" onkeyup="validateText(event)" />
                         </div>
                     </div>
-                    <div class="form-row">
+                    <div class="form-one-row">
                         <div class="form-group">
-                        <label asp-for="Email" class="form-lable">Email*</label>
-                        <input asp-for="Email" class="form-control" onkeyup="validateEmail(event)" />
-                        <span asp-validation-for="Email"></span>
+                        <label asp-for="Email">Email* <span asp-validation-for="Email"></span></label>
+                        <input asp-for="Email" onkeyup="validateEmail(event)" />
+
                         </div>
                     </div>
-                    <div class="form-row">
+                    <div class="form-one-row">
                         <div class="form-group">
-                        <label asp-for="Password" class="form-lable">Password*</label>
-                        <input asp-for="Password" class="form-control" onkeyup="validatePassword(event)" />
-                        <span asp-validation-for="Password"></span>
+                        <label asp-for="Password">Password* <span asp-validation-for="Password"></span></label>
+                        <input asp-for="Password" onkeyup="validatePassword(event)" />
                         </div>
                     </div>
-                    <div class="form-row">
+                    <div class="form-one-row">
                         <div class="form-group">
-                        <label asp-for="ConfirmPassword" class="form-lable">Confirm Password*</label>
-                        <input asp-for="ConfirmPassword" class="form-control" onkeyup="validatePassword(event)" />
-                        <span asp-validation-for="ConfirmPassword"></span>
+                        <label asp-for="ConfirmPassword">Confirm Password* <span asp-validation-for="ConfirmPassword"></span></label>
+                        <input asp-for="ConfirmPassword" onkeyup="validatePassword(event)" />
                         </div>
                     </div>
                     <div class="form-row">

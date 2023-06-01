@@ -2,6 +2,7 @@ using bmarketomvc.Contexts;
 using bmarketomvc.Helpers.Repositories;
 using bmarketomvc.Helpers.Services;
 using bmarketomvc.Models.Entities;
+using bmarketomvc.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -40,6 +41,7 @@ builder.Services.AddScoped<AddressService>();
 builder.Services.AddScoped<UserAdminService>();
 
 builder.Services.AddTransient<ProductEntity>();
+builder.Services.AddTransient<ContactFormViewModel>();
 
 
 var app = builder.Build();

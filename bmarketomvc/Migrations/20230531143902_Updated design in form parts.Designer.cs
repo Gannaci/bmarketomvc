@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using bmarketomvc.Contexts;
 
@@ -11,9 +12,11 @@ using bmarketomvc.Contexts;
 namespace bmarketomvc.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230531143902_Updated design in form parts")]
+    partial class Updateddesigninformparts
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,14 +55,14 @@ namespace bmarketomvc.Migrations
                         new
                         {
                             Id = "ea3bc81b-067d-4116-beab-193c8e836009",
-                            ConcurrencyStamp = "fd3d6900-a007-4374-af0b-04db94afc222",
+                            ConcurrencyStamp = "6573c26a-7cab-4b8f-b553-0ce474e42588",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "0c853e18-0400-40cb-a4e3-ad8ccce39f1f",
-                            ConcurrencyStamp = "2f7cb420-c78b-41f5-9f26-4fd3cb91b7e5",
+                            ConcurrencyStamp = "cb202ebc-5764-4044-a5f2-57ff63671aed",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -215,6 +218,7 @@ namespace bmarketomvc.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Company")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -226,6 +230,10 @@ namespace bmarketomvc.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -710,15 +718,15 @@ namespace bmarketomvc.Migrations
                         {
                             Id = "48dd5706-f505-4a50-a123-dfb2cdf88171",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "2894e2b1-ae8d-4482-b640-6319ca6bba70",
+                            ConcurrencyStamp = "0afce8fd-c3cc-416c-8eda-9f558cca4d96",
                             Email = "admin@bmarketo.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@BMARKETO.COM",
                             NormalizedUserName = "ADMIN@BMARKETO.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEALxnPGA3tETAFzXbiZWOJGYju/yYbDmYgjjqUrETcRc0Ee5Kbx6kuYSlk3PtiVZTg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHVicb2OojqP0LvLRVjqQGv25BXm01HNfRG4YN4DQZffyqMiKFNgMdCBK/3bV0gcCA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8e53231b-872b-407a-99db-a850efa43a5e",
+                            SecurityStamp = "0953ab57-c760-49b5-88b9-1812c1b45acc",
                             TwoFactorEnabled = false,
                             UserName = "admin@bmarketo.com"
                         });

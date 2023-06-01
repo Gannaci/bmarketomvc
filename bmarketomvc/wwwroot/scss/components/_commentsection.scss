@@ -1,12 +1,13 @@
 .commentsection {
     .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         .commentbody {
             margin-top: 50px;
             padding-top: 10px;
-            height: 600px;
+            height: 580px;
             width: 1140px;
             background-color: #FFFFFF;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -17,66 +18,72 @@
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(5, auto);
                 grid-row-gap: 20px;
-              }
-              
-              .title {
+            }
+
+            .title {
                 font-size: 16px;
                 font-family: $font-roboto;
                 margin-left: 40px;
                 margin-top: 30px;
                 color: #636363;
-              }
-              
-              .form-row {
+            }
+
+            .form-row {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
-              }
-              
-              .form-group {
+            }
+
+            .form-group {
                 display: flex;
                 flex-direction: column;
                 margin-right: 20px;
                 color: #636363;
                 font-family: $font-roboto;
                 font-size: 16px;
-              }
-              
-              label {
+            }
+
+            label {
                 font-weight: bold;
                 margin-bottom: 5px;
                 width: 520px;
-              }
-              
-              input[type="text"],
-              input[type="email"],
-              input[type="tel"],
-              input[type="company"],
-              textarea {
+
+                span {
+                    color: red;
+                    font-size: 14px;
+                    padding-top: 10px;
+                    margin-left: 30px;
+                }
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="company"],
+            textarea {
                 width: 500px;
                 height: 40px;
                 background-color: #FAFAFA;
                 border: none;
-              }
-              
-              input[type="streetname"],
-              textarea {
+            }
+
+            input[type="streetname"],
+            textarea {
                 display: flex;
                 height: 100px;
                 width: 1040px;
                 border: none;
                 margin-right: 15px;
-              }
+            }
 
-              .infobox {
+            .infobox {
                 margin-left: 40px;
                 font-size: 14px;
                 font-family: $font-roboto;
+            }
 
-              }
-              
-              button[type="submit"] {
+            button[type="submit"] {
                 background-color: $color-theme-red;
                 color: white;
                 border: none;
@@ -86,11 +93,11 @@
                 width: 140px;
                 height: 50px;
                 margin-left: 40px;
-              }
-              
-              button[type="submit"]:hover {
+            }
+
+            button[type="submit"]:hover {
                 background-color: rgb(233, 96, 96);
-              }
+            }
         }
     }
 }

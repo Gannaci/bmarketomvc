@@ -2,30 +2,29 @@
 using bmarketomvc.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace bmarketomvc.Controllers
+namespace bmarketomvc.Controllers;
+
+public class ContactsController : Controller
 {
-    public class ContactsController : Controller
+    private readonly ContactFormRepo _formRepo;
+public ContactsController(ContactFormRepo formRepo)
+        {
+            _formRepo = formRepo;
+        }
+
+    public IActionResult Index()
     {
-        private readonly ContactFormRepo _formRepo;
-    public ContactsController(ContactFormRepo formRepo)
-            {
-                _formRepo = formRepo;
-            }
+        return View();
+    }
 
-        public IActionResult Index()
+    [HttpPost]
+    public async Task <IActionResult> Index(ContactFormViewModel viewModel)
+    {
+        if (ModelState.IsValid)
         {
-            return View();
+            await _formRepo.AddAsync(viewModel);
+            return RedirectToAction("Index");
         }
-
-        [HttpPost]
-        public async Task <IActionResult> Index(ContactFormViewModel viewModel)
-        {
-            if (ModelState.IsValid)
-            {
-                await _formRepo.AddAsync(viewModel);
-                return RedirectToAction("Index");
-            }
-            return View(viewModel);
-        }
+        return View(viewModel);
     }
 }

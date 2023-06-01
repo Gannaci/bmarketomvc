@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using bmarketomvc.Contexts;
 
@@ -11,9 +12,11 @@ using bmarketomvc.Contexts;
 namespace bmarketomvc.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230601133741_Design fixes")]
+    partial class Designfixes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,14 +55,14 @@ namespace bmarketomvc.Migrations
                         new
                         {
                             Id = "ea3bc81b-067d-4116-beab-193c8e836009",
-                            ConcurrencyStamp = "fd3d6900-a007-4374-af0b-04db94afc222",
+                            ConcurrencyStamp = "6ae9ba22-87fa-4ed5-8961-fb5210878244",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "0c853e18-0400-40cb-a4e3-ad8ccce39f1f",
-                            ConcurrencyStamp = "2f7cb420-c78b-41f5-9f26-4fd3cb91b7e5",
+                            ConcurrencyStamp = "79115713-4813-4f09-a7f0-b326d5d249f2",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -710,15 +713,15 @@ namespace bmarketomvc.Migrations
                         {
                             Id = "48dd5706-f505-4a50-a123-dfb2cdf88171",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "2894e2b1-ae8d-4482-b640-6319ca6bba70",
+                            ConcurrencyStamp = "6b941ab4-cc86-41c8-934b-8e5d64143cef",
                             Email = "admin@bmarketo.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@BMARKETO.COM",
                             NormalizedUserName = "ADMIN@BMARKETO.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEALxnPGA3tETAFzXbiZWOJGYju/yYbDmYgjjqUrETcRc0Ee5Kbx6kuYSlk3PtiVZTg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELlhUf3cF9lvlOv9VGyU1xt7cDNLGu5kULZDna2rv5YYvp+LawzLTM2N5kSMhiXsFw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8e53231b-872b-407a-99db-a850efa43a5e",
+                            SecurityStamp = "9355632e-c060-4f8b-b373-d872cdc84156",
                             TwoFactorEnabled = false,
                             UserName = "admin@bmarketo.com"
                         });

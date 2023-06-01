@@ -13,19 +13,17 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label asp-for="Email">Email adress <a asp-controller="register" asp-action="index"><i>Don't have an account yet?</i></a></label>
-                            <input asp-for="Email" class="form-controll" onkeyup="validateText(event)" />
-                            <span asp-validation-for="Email"></span>
+                        <label asp-for="Email">Email adress* <span asp-validation-for="Email"></span> <a asp-controller="register" asp-action="index"> <i>Don't have an account yet?</i></a></label>
+                            <input asp-for="Email" onkeyup="validateText(event)" />
                         </div>
                         <div class="form-group">
-                            <label asp-for="Password">Password <a asp-controller="register" asp-action="index"> <i>Forgot your password?</i></a></label>
-                            <input asp-for="Password" class="form-control" onkeyup="validatePassword(event)" />
-                            <span asp-validation-for="Password"></span>
+                        <label asp-for="Password">Password* <span asp-validation-for="Password"></span> <a asp-controller="register" asp-action="index"> <i>Forgot your password?</i></a></label>
+                            <input asp-for="Password"  onkeyup="validatePassword(event)" />
                         </div>
 
                         <div class="infobox">
                             <input type="checkbox" style="height: 16px;" id="save-info" name="save-info">
-                            <label for="save-info">Please keep me logged in</label>
+                            <label for="save-info" class="save-info">Please keep me logged in</label>
 
                         </div>
                         
